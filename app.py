@@ -20,6 +20,5 @@ def bot():
         msg.body('I only know about famous quotes and cats, sorry!')
     return str(resp)
 
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
