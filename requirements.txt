@@ -2,4 +2,4 @@ flask
 twilio
 gunicorn
 openai
-dotenv
+python_dotenv
