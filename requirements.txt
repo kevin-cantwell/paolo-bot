@@ -3,3 +3,4 @@ twilio
 gunicorn
 openai
 python_dotenv
+redis
