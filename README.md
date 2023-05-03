@@ -2,6 +2,8 @@
 
 Paolo Bot is an SMS chatbot that impersonates the Brazilian educator and philosopher and author of the book "The Pedagogy of the Oppressed". I built it to troll my friend who likes to argue a lot. When I get annoyed I just send him the number to Paolo Bot and he argues with it instead of me.
 
+![](paolosms.jpeg)
+
 ## How it works
 
 Paolo Bot is a Twilio webhook for SMS interaction. It uses the Twilio API to send and receive SMS messages. It uses the `twilio` module to parse incoming SMS messages and generate responses. It uses the OpenAI api to generate chat responses. Conversations with unique phone numbers are persisted in Redis. Over time, older messages in a conversation will be "forgotten" in order to keep service costs to a minimum.
