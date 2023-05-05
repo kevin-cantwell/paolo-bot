@@ -39,6 +39,7 @@ retries = 3
 
 def chat_with_paolo_freire(phone_number, user_message):
     messages = get_convo(phone_number)
+    messages += [{"role":"user", "content": user_message}]
     for i in range(retries+1):
         try:
             response = do_chat_completion(messages)
@@ -49,9 +50,9 @@ def chat_with_paolo_freire(phone_number, user_message):
                 forget_oldest_user_messages(phone_number, 2)
             
             # Update the conversation history
-            message = response['choices'][0]['message']['content']
+            system_message = response['choices'][0]['message']['content']
             add_user_message(phone_number, user_message)
-            add_system_message(phone_number, message)
+            add_system_message(phone_number, system_message)
 
             return message
         except Exception as error:
