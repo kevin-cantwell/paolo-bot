@@ -54,7 +54,7 @@ def chat_with_paolo_freire(phone_number, user_message):
             add_user_message(phone_number, user_message)
             add_system_message(phone_number, system_message)
 
-            return message
+            return system_message
         except Exception as error:
             print(f"Error communicating with OpenAI API: {error}")
             if i < retries:
